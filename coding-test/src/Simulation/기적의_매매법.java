@@ -67,8 +67,6 @@ public class 기적의_매매법 {
 		int bnp = BNP(balance);
 		int timing = TIMING(balance);
 
-		System.out.println(BNP(balance) + " " + TIMING(balance));
-
 		if (bnp > timing)
 			System.out.println("BNP");
 		else if (bnp < timing)
