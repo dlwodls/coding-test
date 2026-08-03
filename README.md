@@ -42,4 +42,4 @@
 
 - 전부 `Scanner` 사용 → `BufferedReader`로 교체 필요 (CONVENTION.md 6절)
 - 문제별 README의 접근 / 복잡도 / 회고 미작성
-- 난이도 검증 완료. 14717만 세부 티어(Silver 몇) 미확인
+- 난이도 검증 완료

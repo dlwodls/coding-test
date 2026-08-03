@@ -1,7 +1,7 @@
 # [BOJ 14717] 앉았다
 
 - 링크: https://www.acmicpc.net/problem/14717
-- 난이도: Silver  <!-- 세부 티어 확인 후 수정 -->
+- 난이도: Silver
 - 유형: 브루트포스, 확률론
 - 소요 시간:
 - 결과: 정답
