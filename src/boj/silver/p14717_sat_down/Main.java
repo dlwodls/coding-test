@@ -1,4 +1,4 @@
-package boj.bronze.p14717_sat_down;
+package boj.silver.p14717_sat_down;
 
 import java.util.Scanner;
 
