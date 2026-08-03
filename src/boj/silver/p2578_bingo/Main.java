@@ -1,8 +1,8 @@
-package Simulation;
+package boj.silver.p2578_bingo;
 
 import java.util.Scanner;
 
-public class 빙고 {
+public class Main {
 	public static int checkBingo(boolean[][] board) {
 		int bingo = 0; // 빙고 개수
 		// 세로 빙고 확인

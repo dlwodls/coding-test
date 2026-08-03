@@ -1,8 +1,8 @@
-package Simulation;
+package boj.silver.p20546_miracle_trading;
 
 import java.util.Scanner;
 
-public class 기적의_매매법 {
+public class Main {
 	static int[] stock = new int[14];
 
 	// BNP 방식

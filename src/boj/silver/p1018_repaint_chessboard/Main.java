@@ -1,8 +1,8 @@
-package BruteForce;
+package boj.silver.p1018_repaint_chessboard;
 
 import java.util.Scanner;
 
-public class 체스판_다시_칠하기 {
+public class Main {
 	public static int cnt(char[][] board, int x, int y) {
 		int cnt_W = 0; // W로 시작할 때 다시 칠해야 하는 개수
 		int cnt_B = 0; // B로 시작할 때 다시 칠해야 하는 개수

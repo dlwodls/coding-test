@@ -1,9 +1,9 @@
-package BruteForce;
+package boj.bronze.p10448_eureka_theory;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class 유레카_이론 {
+public class Main {
 	public static int T(int n) {
 		ArrayList<Integer> tri = new ArrayList<>();
 		// 삼각수 리스트에 미리 저장

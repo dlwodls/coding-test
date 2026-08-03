@@ -1,8 +1,8 @@
-package BruteForce;
+package boj.bronze.p14717_sat_down;
 
 import java.util.Scanner;
 
-public class 앉았다 {
+public class Main {
 	// 상대가 이기는 경우 세는 함수
 	public static int cnt_case(int a, int b) {
 		int cnt = 0;

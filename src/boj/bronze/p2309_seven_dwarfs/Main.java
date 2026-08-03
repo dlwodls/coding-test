@@ -1,10 +1,10 @@
-package BruteForce;
+package boj.bronze.p2309_seven_dwarfs;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class 일곱_난쟁이 {
+public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 

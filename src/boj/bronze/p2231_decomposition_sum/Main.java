@@ -1,8 +1,8 @@
-package BruteForce;
+package boj.bronze.p2231_decomposition_sum;
 
 import java.util.Scanner;
 
-public class 분해합 {
+public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 

@@ -1,8 +1,8 @@
-package DP;
+package boj.bronze.p2748_fibonacci_2;
 
 import java.util.Scanner;
 
-public class 피보나치_수_2 {
+public class Main {
 	static long[] dp;
 
 	public static void main(String[] args) {

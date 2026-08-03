@@ -1,8 +1,8 @@
-package Simulation;
+package boj.bronze.p1547_ball;
 
 import java.util.Scanner;
 
-public class 공 {
+public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 

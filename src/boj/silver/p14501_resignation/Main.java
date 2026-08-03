@@ -1,8 +1,8 @@
-package Simulation;
+package boj.silver.p14501_resignation;
 
 import java.util.Scanner;
 
-public class 퇴사 {
+public class Main {
 	public static int calculateProfit(int N, int T[], int P[]) {
 		int maxProfit = 0;
 
