@@ -1,19 +1,30 @@
 package boj.bronze.p2309_seven_dwarfs;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+	private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	private static StringTokenizer st;
 
+	// Scanner.nextInt() 처럼 줄바꿈에 상관없이 다음 토큰을 읽는다.
+	private static int nextInt() throws IOException {
+		while (st == null || !st.hasMoreTokens())
+			st = new StringTokenizer(br.readLine());
+		return Integer.parseInt(st.nextToken());
+	}
+
+	public static void main(String[] args) throws IOException {
 		int[] A = new int[9];
 		int i, j, sum = 0;
 
 		// 아홉 난쟁이 키 입력받기
 		for (i = 0; i < 9; i++) {
-			A[i] = sc.nextInt();
+			A[i] = nextInt();
 			sum += A[i];
 		}
 
@@ -42,8 +53,10 @@ public class Main {
 		Collections.sort(answer);
 
 		// 키 리스트 출력
+		StringBuilder sb = new StringBuilder();
 		for (int k : answer) {
-			System.out.println(k);
+			sb.append(k).append('\n');
 		}
+		System.out.print(sb);
 	}
 }

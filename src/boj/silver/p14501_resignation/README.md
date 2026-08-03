@@ -21,5 +21,4 @@
 
 ## TODO
 
-- [ ] `Scanner` → `BufferedReader` 교체 (CONVENTION.md 6절)
 - [ ] 접근 / 복잡도 회고 작성

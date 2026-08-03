@@ -1,12 +1,23 @@
 package boj.bronze.p1547_ball;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+	private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	private static StringTokenizer st;
 
-		int M = sc.nextInt(); // 컵의 위치를 바꾼 횟수
+	// Scanner.nextInt() 처럼 줄바꿈에 상관없이 다음 토큰을 읽는다.
+	private static int nextInt() throws IOException {
+		while (st == null || !st.hasMoreTokens())
+			st = new StringTokenizer(br.readLine());
+		return Integer.parseInt(st.nextToken());
+	}
+
+	public static void main(String[] args) throws IOException {
+		int M = nextInt(); // 컵의 위치를 바꾼 횟수
 
 		int[] cup = new int[3];
 
@@ -16,8 +27,8 @@ public class Main {
 
 		for (int i = 0; i < M; i++) {
 			// 컵의 위치를 바꾼 방법 X, Y
-			int X = sc.nextInt();
-			int Y = sc.nextInt();
+			int X = nextInt();
+			int Y = nextInt();
 
 			int tmp;
 			outer: for (int j = 0; j < cup.length; j++) {

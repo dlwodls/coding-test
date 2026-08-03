@@ -1,8 +1,21 @@
 package boj.silver.p20546_miracle_trading;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
+	private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	private static StringTokenizer st;
+
+	// Scanner.nextInt() 처럼 줄바꿈에 상관없이 다음 토큰을 읽는다.
+	private static int nextInt() throws IOException {
+		while (st == null || !st.hasMoreTokens())
+			st = new StringTokenizer(br.readLine());
+		return Integer.parseInt(st.nextToken());
+	}
+
 	static int[] stock = new int[14];
 
 	// BNP 방식
@@ -54,14 +67,12 @@ public class Main {
 		return balance + quantity * stock[13];
 	}
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-
-		int balance = sc.nextInt();
+	public static void main(String[] args) throws IOException {
+		int balance = nextInt();
 
 		// 주가 입력
 		for (int i = 0; i < stock.length; i++) {
-			stock[i] = sc.nextInt();
+			stock[i] = nextInt();
 		}
 
 		int bnp = BNP(balance);
@@ -73,6 +84,5 @@ public class Main {
 			System.out.println("TIMING");
 		else
 			System.out.println("SAMESAME");
-
 	}
 }

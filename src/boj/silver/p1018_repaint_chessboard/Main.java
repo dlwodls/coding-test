@@ -1,6 +1,9 @@
 package boj.silver.p1018_repaint_chessboard;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
 	public static int cnt(char[][] board, int x, int y) {
@@ -29,18 +32,18 @@ public class Main {
 		return Math.min(cnt_W, cnt_B);
 	}
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
 
-		int M = sc.nextInt();
-		int N = sc.nextInt();
-		sc.nextLine(); // 개행 처리
+		int M = Integer.parseInt(st.nextToken());
+		int N = Integer.parseInt(st.nextToken());
 
 		char[][] board = new char[M][N];
 
 		// 보드의 행 상태 입력
 		for (int i = 0; i < M; i++) {
-			String line = sc.nextLine();
+			String line = br.readLine();
 			for (int j = 0; j < N; j++) {
 				board[i][j] = line.charAt(j);
 			}

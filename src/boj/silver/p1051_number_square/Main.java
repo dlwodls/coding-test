@@ -1,19 +1,22 @@
 package boj.silver.p1051_number_square;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
 
-		int N = sc.nextInt();
-		int M = sc.nextInt();
-		sc.nextLine();
+		int N = Integer.parseInt(st.nextToken());
+		int M = Integer.parseInt(st.nextToken());
 
 		char[][] rect = new char[N][M];
 
 		for (int i = 0; i < N; i++) {
-			String line = sc.nextLine();
+			String line = br.readLine();
 			for (int j = 0; j < M; j++) {
 				rect[i][j] = line.charAt(j);
 			}

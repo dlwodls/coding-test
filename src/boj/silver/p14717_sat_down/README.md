@@ -17,9 +17,11 @@
 
 ## 막힌 부분 / 틀린 이유
 
+정답 출력 전에 `System.out.println(cnt_case(A, B));` 디버그 출력이 남아 있었다.
+이 상태로 제출하면 출력 형식이 달라 오답 처리된다. BufferedReader 전환 시 제거했다.
+
 ## 배운 것
 
 ## TODO
 
-- [ ] `Scanner` → `BufferedReader` 교체 (CONVENTION.md 6절)
 - [ ] 접근 / 복잡도 회고 작성

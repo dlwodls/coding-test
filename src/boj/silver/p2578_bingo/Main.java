@@ -1,8 +1,21 @@
 package boj.silver.p2578_bingo;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
+	private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	private static StringTokenizer st;
+
+	// Scanner.nextInt() 처럼 줄바꿈에 상관없이 다음 토큰을 읽는다.
+	private static int nextInt() throws IOException {
+		while (st == null || !st.hasMoreTokens())
+			st = new StringTokenizer(br.readLine());
+		return Integer.parseInt(st.nextToken());
+	}
+
 	public static int checkBingo(boolean[][] board) {
 		int bingo = 0; // 빙고 개수
 		// 세로 빙고 확인
@@ -48,12 +61,9 @@ public class Main {
 			bingo++;
 
 		return bingo;
-
 	}
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-
+	public static void main(String[] args) throws IOException {
 		int[][] board = new int[5][5]; // 빙고판
 		boolean[][] bingo = new boolean[5][5]; // 빙고 유무
 		int[] call = new int[25]; // 사회자가 부르는 수
@@ -62,13 +72,13 @@ public class Main {
 		// 빙고판 입력
 		for (int i = 0; i < board.length; i++) {
 			for (int j = 0; j < board[i].length; j++) {
-				board[i][j] = sc.nextInt();
+				board[i][j] = nextInt();
 			}
 		}
 
 		// 사회자가 부르는 수 입력
 		for (int i = 0; i < call.length; i++) {
-			call[i] = sc.nextInt();
+			call[i] = nextInt();
 		}
 
 		// 빙고판에 체크

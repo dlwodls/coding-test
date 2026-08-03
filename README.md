@@ -38,8 +38,8 @@
 
 ## 남은 정리
 
-2025년 8월 Eclipse 프로젝트에서 마이그레이션한 문제들은 아래가 미완료 상태다.
+2025년 8월 Eclipse 프로젝트에서 마이그레이션한 11문제 기준.
 
-- 전부 `Scanner` 사용 → `BufferedReader`로 교체 필요 (CONVENTION.md 6절)
-- 문제별 README의 접근 / 복잡도 / 회고 미작성
-- 난이도 검증 완료
+- [x] 난이도 검증
+- [x] `Scanner` → `BufferedReader` 교체
+- [ ] 문제별 README의 접근 / 복잡도 / 회고 작성

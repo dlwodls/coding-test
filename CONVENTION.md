@@ -148,9 +148,39 @@ chore: gitignore 수정
 - 채점 서버는 대개 로컬보다 낮은 버전이다. 제출 전 해당 플랫폼의 지원 Java 버전을 확인하고,
   최신 문법(레코드 패턴, 신규 컬렉션 API 등)은 피한다.
 
-### 입출력
+### 입출력 — 백준에만 해당
 
-`Scanner` 금지. 항상 `BufferedReader` + `StringBuilder`. 템플릿은 `src/template/FastIO.java`.
+**프로그래머스는 표준 입력을 쓰지 않는다.** 입력이 `solution()` 메서드의 인자로 들어오므로
+`Scanner`도 `BufferedReader`도 등장하지 않는다. 아래 규칙은 백준 전용이다.
+
+```java
+// 프로그래머스: 입력은 인자로 온다
+public class Solution {
+    public String[] solution(int n, int[] arr1, int[] arr2) {
+        // ...
+    }
+}
+```
+
+#### 백준: `Scanner` 금지, `BufferedReader` 사용
+
+`Scanner`는 `nextInt()` 한 번마다 정규식으로 토큰 경계를 찾고 정수인지 다시 검증한다.
+버퍼도 1024자로 작아 시스템 콜이 잦다. `BufferedReader`는 8192자 버퍼에서 줄만 넘겨주고
+파싱은 `Integer.parseInt` / `StringTokenizer`에 맡긴다.
+
+정수 100만 개 입력 기준 (JDK 21, Apple Silicon 실측):
+
+| 방식 | 소요 |
+|---|---|
+| `Scanner` | 약 250 ms |
+| `BufferedReader` | 약 35 ms |
+
+**약 7배.** 백준 시간 제한은 보통 1~2초라, 입력에만 250ms를 쓰면 알고리즘 예산이 그만큼 준다.
+알고리즘이 맞는데도 시간 초과가 나는 원인이 대부분 여기다. 그러면 엉뚱한 데서 원인을 찾게 된다.
+
+입력이 작은 문제에서는 차이가 없지만, 그때그때 판단하지 말고 **항상** `BufferedReader`로 시작한다.
+
+템플릿은 `src/template/FastIO.java`.
 
 ```java
 package boj.silver.p1927_min_heap;
@@ -180,7 +210,7 @@ public class Main {
 ### 제출할 때
 
 **`package` 선언은 지우고 제출한다.** 백준·프로그래머스 채점기는 기본 패키지를 기대한다.
-클래스명도 플랫폼 요구에 맞춘다 (백준은 `Main`).
+클래스명도 플랫폼 요구에 맞춘다 (백준은 `Main`, 프로그래머스는 `Solution`).
 
 로컬에서는 패키지를 유지해야 IntelliJ가 문제별 폴더를 구분한다. 이 둘은 어쩔 수 없이 다르다.
 
